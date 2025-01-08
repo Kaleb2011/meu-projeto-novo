@@ -9,7 +9,9 @@ class Course extends Model
 {
     use HasFactory;
 
-    protected $table = "courses";
+    // Indicar o nome da tabela
+    protected $table = 'courses';
 
-    protected $fillable = ["name"];
+    // Indicar quais colunas podem ser cadastrada
+    protected $fillable = ['name'];
 }
