@@ -16,6 +16,8 @@
         @method('PUT')
 
         <label>Nome: </label>
+        <input type="hidden" name="id" id="id" value="{{$course->id}}"
+        ><br><br>
         <input type="text" name="name" id="name" placeholder="Nome do curso" value="{{ old('name', $course->name) }}"
             required><br><br>
 
