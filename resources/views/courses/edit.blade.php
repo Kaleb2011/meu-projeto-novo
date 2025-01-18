@@ -6,20 +6,30 @@
     <a href="{{ route('courses.index') }}">
         <button type="button">Listar</button>
     </a><br><br>
-    
+
     <a href="{{ route('courses.show', ['course' => $course->id]) }}">
         <button type="button">Visualizar</button>
     </a><br><br>
+
+    @if ($errors->any())
+        <span style="color: #f00">
+            @foreach ($errors->all() as $error)
+                {{ $error }}<br>
+            @endforeach
+        </span>
+    @endif
 
     <form action="{{ route('courses.update', ['course' => $course->id]) }}" method="POST">
         @csrf
         @method('PUT')
 
         <label>Nome: </label>
-        <input type="hidden" name="id" id="id" value="{{$course->id}}"
-        ><br><br>
         <input type="text" name="name" id="name" placeholder="Nome do curso" value="{{ old('name', $course->name) }}"
-            required><br><br>
+            ><br><br>
+
+        <label>Preço: </label>
+        <input type="text" name="price" id="price" placeholder="Preço do curso: 2.47"
+            value="{{ old('price', $course->price) }}" ><br><br>
 
         <button type="submit">Salvar</button>
 
