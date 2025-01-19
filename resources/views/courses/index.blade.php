@@ -7,11 +7,7 @@
         <button type="button">Cadastrar</button>
     </a><br><br>
 
-    @if (session('success'))
-        <p style="color: #082">
-            {{ session('success') }}
-        </p>
-    @endif
+    <x-alert />
 
     {{-- Imprimir os registros --}}
     @forelse ($courses as $course)
