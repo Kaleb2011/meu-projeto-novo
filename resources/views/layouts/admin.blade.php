@@ -5,16 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="{{ asset('favicon.ico')}}" type="image/x-icon">
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/styles_sbadmin.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/all.min.css') }}" rel="stylesheet">
 
     <title>Celke</title>
 </head>
 
 <body class="sb-nav-fixed">
 
-    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-nav">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
         <a class="navbar-brand ps-3" href="#">Celke</a>
         <!-- Sidebar Toggle-->
@@ -38,21 +39,16 @@
 
     <div id="layoutSidenav">
         <div id="layoutSidenav_nav">
-            <nav class="sb-sidenav accordion sb-sidenav-five" id="sidenavAccordion">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         
-                        <a @class(['nav-link', 'active' => isset($menu) && $menu == 'dashboard']) href="{{ route('dashboard.index') }}">
+                        <a class="nav-link" href="#">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Dashboard
                         </a>
 
-                        <a @class(['nav-link', 'active' => isset($menu) && $menu == 'users']) href="{{ route('user.index') }}">
-                            <div class="sb-nav-link-icon"><i class="fa-solid fa-users"></i></div>
-                            Usuários
-                        </a>
-
-                        <a @class(['nav-link', 'active' => isset($menu) && $menu == 'courses']) href="{{ route('course.index') }}">
+                        <a class="nav-link" href="{{ route('course.index') }}">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
                             Cursos
                         </a>
@@ -91,6 +87,10 @@
         </div>
 
     </div>    
+
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('js/scripts_sbadmin.js') }}"></script>
+    <script src="{{ asset('js/all.min.js') }}"></script>
 
 </body>
 

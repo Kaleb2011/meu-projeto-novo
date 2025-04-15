@@ -7,7 +7,7 @@
 
             <ol class="breadcrumb mb-3 mt-3 ms-auto">
                 <li class="breadcrumb-item">
-                    <a href="{{ route('dashboard.index') }}" class="text-decoration-none">Dashboard</a>
+                    <a href="#" class="text-decoration-none">Dashboard</a>
                 </li>
                 <li class="breadcrumb-item">
                     <a href="{{ route('course.index') }}" class="text-decoration-none">Cursos</a>
@@ -16,14 +16,14 @@
             </ol>
         </div>
 
-        <div class="card mb-4 border-light shadow">
+        <div class="card mb-4">
 
             <div class="card-header hstack gap-2">
                 <span>Cadastrar</span>
 
                 <span class="ms-auto d-sm-flex flex-row">
 
-                    <a href="{{ route('course.index') }}" class="btn btn-info btn-sm me-1 mb-1 mb-sm-0"><i class="fa-solid fa-list"></i> Listar</a>
+                    <a href="{{ route('course.index') }}" class="btn btn-info btn-sm me-1 mb-1 mb-sm-0">Listar</a>
 
                 </span>
             </div>

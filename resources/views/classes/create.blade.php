@@ -7,7 +7,7 @@
 
             <ol class="breadcrumb mb-3 mt-3 ms-auto">
                 <li class="breadcrumb-item">
-                    <a href="{{ route('dashboard.index') }}" class="text-decoration-none">Dashboard</a>
+                    <a href="#" class="text-decoration-none">Dashboard</a>
                 </li>
                 <li class="breadcrumb-item">
                     <a href="{{ route('course.show', ['course' => $course->id]) }}" class="text-decoration-none">Curso</a>
@@ -19,14 +19,14 @@
             </ol>
         </div>
 
-        <div class="card mb-4 border-light shadow">
+        <div class="card mb-4">
 
             <div class="card-header hstack gap-2">
                 <span>Cadastrar</span>
 
                 <span class="ms-auto d-sm-flex flex-row">
 
-                    <a href="{{ route('classe.index', ['course' => $course->id]) }}" class="btn btn-info btn-sm me-1 mb-1 mb-sm-0"><i class="fa-solid fa-list"></i> Aulas</a>
+                    <a href="{{ route('classe.index', ['course' => $course->id]) }}" class="btn btn-info btn-sm me-1 mb-1 mb-sm-0">Aulas</a>
 
                 </span>
             </div>
@@ -53,7 +53,7 @@
 
                     <div class="col-12">
                       <label for="name" class="form-label">Descrição</label>
-                      <textarea name="description" rows="4" cols="30" id="description" class="form-control" placeholder="Conteúdo da aula" required>{{ old('description') }}</textarea>
+                      <textarea name="description" rows="4" cols="30" id="description" class="form-control" required>{{ old('description') }}</textarea>
                     </div>
 
                     <div class="col-12">
